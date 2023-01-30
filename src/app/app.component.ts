@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ang19';
+  firstname:string='';
+  gen:string|null=null;
+  techs:Array<string>=[];
+  updateTechs(e:Event|any){
+    if(e.target.checked){
+      this.techs.push(e.target.value)
+    }
+    console.log(this.techs)
+  }
 }
