@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ImggalrotationComponent } from './imggalrotation/imggalrotation.component';
+import { LikedislikesComponent } from './likedislikes/likedislikes.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ImggalrotationComponent,
+    LikedislikesComponent
   ],
   imports: [
     BrowserModule,
