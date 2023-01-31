@@ -11,3 +11,15 @@
 <input type="checkbox" value="Angular" (change)="updateTechs($event)">:Angular<br>
 <input type="checkbox" value="React" (change)="updateTechs($event)">:React<br>
 <h3>{{techs}}</h3>
+<hr>
+<select [(ngModel)]="selectedCountry">
+  <option value="null" disabled selected>Please Select</option>
+  <option value="india">india</option>
+  <option value="srilanka">srilanka</option>
+  <option value="pakistan">pakistan</option>
+</select>
+<h1>{{selectedCountry}}</h1>
+<hr>
+<input type="file" (change)="updateimg($event)">
+
+<img [src]="myimg" alt="" width="100px">
