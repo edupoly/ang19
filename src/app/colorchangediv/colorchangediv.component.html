@@ -1,0 +1,5 @@
+<div [class]="flag===true?'yellowback':''" style="border:1px solid;width:500px;height:300px">
+  
+</div>
+<button (click)="lighton()" [class]="flag===true?'redback':''">On</button>
+<button (click)="lightoff()" [class]="flag===false?'redback':''">Off</button>
