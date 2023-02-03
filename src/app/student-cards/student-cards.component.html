@@ -1,0 +1,10 @@
+<input type="text" [(ngModel)]="firstname"><br>
+<input type="text" [(ngModel)]="lastname"><br>
+<input type="text" [(ngModel)]="age"><br>
+<button (click)="addStudent()">Add Student</button>
+<ul class="d-flex">
+  <li *ngFor="let student of students" class=" border border-2 border-danger">
+    <h4>{{student.firstname}} {{student.lastname}}</h4>
+    <h5>{{student.age}}</h5>
+  </li>
+</ul>
