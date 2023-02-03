@@ -9,7 +9,12 @@ export class ParentComponent implements OnInit {
 
   constructor() { }
   myfirstname:string='praveen';
+  mylastname:string=''
   ngOnInit(): void {
+  }
+
+  sayHi(e:Event){
+    this.mylastname = e.toString(); 
   }
 
 }

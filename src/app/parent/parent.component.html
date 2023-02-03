@@ -1,5 +1,5 @@
 <div class="border border-3 border-info p-2 m-2">
-  <h1>Parent Component:{{myfirstname}}</h1>
+  <h1>Parent Component:{{myfirstname}} {{mylastname}}</h1>
   <input type="text" [(ngModel)]="myfirstname">
-  <app-child [x]="myfirstname"></app-child>
+  <app-child [x]="myfirstname" (y)="sayHi($event)"></app-child>
 </div>
