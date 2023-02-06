@@ -1,3 +1,8 @@
 <div class="border border-2 border-success p-2 m-2">
   <h1>App Component</h1>
+  <h2 *ngIf="true">Welcome to Edupoly</h2>
+  <input type="text" [(ngModel)]="n1">
+  <h1>{{n1}}</h1>
+  <h1 *ngIf="n1%2===0">Even</h1>
+  <h1 *ngIf="n1%2===1">Odd</h1>
 </div>
