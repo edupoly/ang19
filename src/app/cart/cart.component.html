@@ -1,0 +1,9 @@
+<div class="border border-2 border-info p-2 m-2">
+  <h3>Cart:</h3>
+  <li *ngFor="let item of cartItems" class="d-flex flex-wrap">
+    <div class="w-50">{{item.title}}</div>
+    <div class="w-25 text-end">{{item.count}}</div>
+    <div class="w-25 text-end">{{item.count*item.price}}</div>
+  </li>
+  <h3 class="text-end">Total:{{getTotal()}}</h3>
+</div>

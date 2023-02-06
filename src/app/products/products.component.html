@@ -1,0 +1,25 @@
+<div class="p-2 border border-2 border-danger w-100 d-flex flex-wrap">
+  <div style="width:60%">
+    <li *ngFor="let product of products" class="list-unstyled">
+      <div class="d-flex flex-wrap align-items-center">
+        <div style="width:150px">
+          <img class='p-2 w-100' [src]="product.image"alt="">
+        </div>
+        <div>
+          <b>{{product.title}}</b>
+          <h3>{{product.price}}</h3>
+          <button (click)="addToCart(product)" *ngIf="!isProductInCart(product)">Add To Cart</button>
+          <div *ngIf="isProductInCart(product)">
+            <button>-</button>
+            <b>{{productCount(product)}}</b>
+            <button (click)="incCartProductCount(product)">+</button>
+          </div>
+        </div>
+      </div>
+     
+    </li>
+  </div>
+  <div style="width:40%">
+    <app-cart [cartItems]="cart"></app-cart>
+  </div>
+</div>
