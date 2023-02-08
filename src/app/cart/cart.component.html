@@ -3,7 +3,7 @@
   <li *ngFor="let item of cartItems" class="d-flex flex-wrap">
     <div class="w-50">{{item.title}}</div>
     <div class="w-25 text-end">{{item.count}}</div>
-    <div class="w-25 text-end">{{item.count*item.price|number:'1.2'}}</div>
+    <div class="w-25 text-end">{{item.count*item.price|currency}}</div>
   </li>
-  <h3 class="text-end">Total:{{getTotal()|number:'1.2'}}</h3>
+  <h3 class="text-end">Total:{{getTotal()|currency}}</h3>
 </div>

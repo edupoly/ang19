@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ang19';
+  dob="2014-4-10";
+  weights=[12,39,19,48,20,44,20];
 }

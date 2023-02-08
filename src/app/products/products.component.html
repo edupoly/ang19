@@ -1,6 +1,9 @@
+<b>Sort By Price:</b>
+<i class="bi bi-arrow-up-square" style="font-weight:bold;font-size:50px"></i>
+<i class="bi bi-arrow-down-square" style="font-weight:bold;font-size:50px"></i>
 <div class="p-2 border border-2 border-danger w-100 d-flex flex-wrap">
   <div style="width:60%">
-    <li *ngFor="let product of products" class="list-unstyled">
+    <li *ngFor="let product of products|sort" class="list-unstyled">
       <div class="d-flex flex-wrap align-items-center">
         <div style="width:150px">
           <img class='p-2 w-100' [src]="product.image"alt="">
