@@ -19,4 +19,7 @@ export class ChildComponent implements OnInit {
   phi(){
     this.y.emit("gubbala");
   }
+  ngOnChanges(){
+    console.log("Child Component ngOnChanges called")
+  }
 }
