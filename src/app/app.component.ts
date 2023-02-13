@@ -10,14 +10,11 @@ export class AppComponent {
   title = 'ang19';
   countries:any=[]
   constructor(public http:HttpClient){}
-  loadCountries(){
+  
+  ngOnInit(){
     this.http.get("https://restcountries.com/v3.1/all").subscribe((data)=>{
       console.log(data)
       this.countries=data;
     })
-  }
-  //lifecycle methods
-  ngOnChange(){
-    console.log("HI")
   }
 }
