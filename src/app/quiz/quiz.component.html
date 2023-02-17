@@ -1,0 +1,21 @@
+<div class="border border-2 border-info m-2 p-2"> 
+  <h1>Quiz</h1>
+  <ol>
+    <!-- [class]="isSubmitted?((q.selectedAnswer==q.correctAnswer)?'bg-success m-2':'bg-danger'):''" -->
+    <li *ngFor="let q of questions;let i = index" >
+      {{q.question}}(({{q.correctAnswer}},{{q.selectedAnswer}}))
+      <ol type="A" class="">
+        <li *ngFor="let ops of q.options">
+          <!-- *ngIf="isSubmitted && " -->
+          <div className="m-2 p-2">
+            <input type="radio" [name]="q.id" [value]="ops" (change)="markAnswer(ops,i)" />:{{ops}}
+            <i class="bi bi-check-circle-fill h3 text-success" *ngIf="isSubmitted && ops===q.correctAnswer"></i>
+            <i class="bi bi-x-circle h3 text-danger" *ngIf="isSubmitted && q.correctAnswer!== q.selectedAnswer && ops===q.selectedAnswer"></i>  
+            <i class="bi bi-emoji-smile h3" *ngIf="isSubmitted && q.selectedAnswer===q.correctAnswer && ops===q.selectedAnswer"></i>
+          </div>
+          </li>
+      </ol>
+    </li>
+  </ol>
+  <button (click)="quizSubmit()">Submit Quiz</button>
+</div>
