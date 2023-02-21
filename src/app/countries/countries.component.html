@@ -1,0 +1,10 @@
+<div class="d-flex flex-wrap">
+  <ul>
+    <li *ngFor="let c of countries;">
+      <a [routerLink]="['countrydetails',c.alpha2Code]">{{c.name}}</a>
+    </li>
+  </ul>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
