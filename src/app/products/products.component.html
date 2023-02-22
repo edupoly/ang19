@@ -1,0 +1,8 @@
+
+<div>
+  <ul>
+    <li *ngFor="let product of products">
+      <a routerLink="/productDetails" [queryParams]="{product:getQpString(product)}">{{product.title}}</a>
+    </li>
+  </ul>
+</div>

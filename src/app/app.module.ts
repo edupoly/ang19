@@ -11,7 +11,11 @@ import { EdupolymapComponent } from './edupolymap/edupolymap.component';
 import { EdupolycontactformComponent } from './edupolycontactform/edupolycontactform.component';
 import { CountriesComponent } from './countries/countries.component';
 import {HttpClientModule} from '@angular/common/http';
-import { CountrydetailsComponent } from './countrydetails/countrydetails.component'
+import { CountrydetailsComponent } from './countrydetails/countrydetails.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { ContactfromComponent } from './contactfrom/contactfrom.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,12 +26,17 @@ import { CountrydetailsComponent } from './countrydetails/countrydetails.compone
     EdupolymapComponent,
     EdupolycontactformComponent,
     CountriesComponent,
-    CountrydetailsComponent
+    CountrydetailsComponent,
+    ProductsComponent,
+    ProductdetailsComponent,
+    ContactfromComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

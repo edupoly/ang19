@@ -1,0 +1,12 @@
+<div [formGroup]="contactForm">
+  <input type="text" formControlName="firstname"><br>
+  <div *ngIf="contactForm.controls['firstname']['errors'] && contactForm.controls['firstname']['errors']['required']">
+    Please fill the first name
+  </div>
+  <div *ngIf="contactForm.controls['firstname']['errors'] && contactForm.controls['firstname']['errors']['maxlength']">
+    Please keep your firstname smaller than 10
+  </div>
+  <input type="text" formControlName="lastname"><br>
+  <input type="date" formControlName="dob"><br>
+  <button (click)="register()">Register</button>
+</div>
