@@ -1,10 +1,21 @@
 <div [formGroup]="contactForm">
   <input type="text" formControlName="firstname"><br>
-  <div *ngIf="contactForm.controls['firstname']['errors'] && contactForm.controls['firstname']['errors']['required']">
-    Please fill the first name
+  <div *ngIf="contactForm.controls['firstname'].touched">
+    <div *ngIf="contactForm.controls['firstname']['errors'] && contactForm.controls['firstname']['errors']['required']">
+      Please fill the first name
+    </div>
+    <div *ngIf="contactForm.controls['firstname']['errors'] && contactForm.controls['firstname']['errors']['maxlength']">
+      Please keep your firstname smaller than 10
+    </div>
   </div>
-  <div *ngIf="contactForm.controls['firstname']['errors'] && contactForm.controls['firstname']['errors']['maxlength']">
-    Please keep your firstname smaller than 10
+  <input type="text" formControlName="username" placeholder="username"><br/>
+  <div *ngIf="contactForm.controls['username'].touched">
+    <div *ngIf="contactForm.controls['username']['errors'] && contactForm.controls['username']['errors']['required']">
+      Please fill the username
+    </div>
+    <div *ngIf="contactForm.controls['username']['errors'] && contactForm.controls['username']['errors']['usernameExist']">
+      {{contactForm.controls['username']['errors']['usernameExist']}}
+    </div>
   </div>
   <input type="text" formControlName="lastname"><br>
   <input type="date" formControlName="dob"><br>
