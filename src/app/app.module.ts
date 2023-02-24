@@ -16,6 +16,10 @@ import { ProductsComponent } from './products/products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { ContactfromComponent } from './contactfrom/contactfrom.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { MatSlideToggleModule } from '@angular/material';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,14 +33,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CountrydetailsComponent,
     ProductsComponent,
     ProductdetailsComponent,
-    ContactfromComponent
+    ContactfromComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
