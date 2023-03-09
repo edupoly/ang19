@@ -10,6 +10,7 @@ import { FormGroup,FormControl,Validators } from '@angular/forms';
 export class ContactfromComponent implements OnInit {
 
   constructor(public http:HttpClient) { }
+
   contactForm:FormGroup=new FormGroup({
     firstname:new FormControl('',[Validators.required,Validators.maxLength(10),this.checkFn]),
     lastname:new FormControl(),
@@ -19,6 +20,11 @@ export class ContactfromComponent implements OnInit {
     }),
     dob:new FormControl('',Validators.required)
   });
+
+  get firstname(){
+    return this.contactForm.get('firstname') as FormControl
+  }
+
   ngOnInit(): void {
 
   }
@@ -28,7 +34,7 @@ export class ContactfromComponent implements OnInit {
   register(){
     if(!this.contactForm.valid){
       this.contactForm.markAsTouched()
-      this.contactForm.controls['firstname'].markAsTouched();
+      this.firstname.markAllAsTouched()
       this.contactForm.controls['lastname'].markAsTouched();
       this.contactForm.controls['dob'].markAsTouched();
     }
